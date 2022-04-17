@@ -1,8 +1,16 @@
 package project;
 
+import java.awt.*;
+import java.awt.image.BufferedImage;
+import java.io.*;
+
+import javax.imageio.ImageIO;
+import javax.swing.*;
+
 public class classWin extends win {
 	mainWin parent;
 	classTitleLabel title;
+	classImage image;
 	classStartButton startButton;
 	classStopButton stopButton;
 	classBackButton backButton;
@@ -13,6 +21,9 @@ public class classWin extends win {
 		
 		title = new classTitleLabel(this);
 		jframe.add(title);
+		
+		image = new classImage(this);
+		jframe.add(image);
 		
 		startButton = new classStartButton(this);
 		jframe.add(startButton);
