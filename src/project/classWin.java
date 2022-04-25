@@ -14,6 +14,7 @@ public class classWin extends win {
 	classStartButton startButton;
 	classStopButton stopButton;
 	classBackButton backButton;
+	classTimer timer;
 	
 	classWin(mainWin p)
 	{
@@ -24,6 +25,7 @@ public class classWin extends win {
 		
 		image = new classImage(this);
 		jframe.add(image);
+		timer = new classTimer(this);
 		
 		startButton = new classStartButton(this);
 		jframe.add(startButton);

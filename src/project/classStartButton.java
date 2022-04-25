@@ -11,9 +11,10 @@ import javax.swing.ImageIcon;
 public class classStartButton extends mainButton {
 	classWin parent;
 	
-	private String defaultName = "E:\\xampp\\htdocs\\Hello";
+	private String defaultName = "E:\\xampp\\htdocs\\screen";
 	private String defaultImageFormat="png";
 	Dimension d = Toolkit.getDefaultToolkit().getScreenSize();
+	public int start=0;
 	
 	classStartButton(classWin p)
 	{
@@ -48,11 +49,12 @@ public class classStartButton extends mainButton {
 	
 	public void doSomthing() {
 		//開始上課直播
+		start=1;
 		snapShot();
 		
 		BufferedImage img = null;
 		try {
-		    img = ImageIO.read(new File("E:\\xampp\\htdocs\\Hello.png"));
+		    img = ImageIO.read(new File(defaultName+"."+defaultImageFormat));
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}

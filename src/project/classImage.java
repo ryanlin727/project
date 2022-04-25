@@ -15,11 +15,9 @@ public class classImage extends JLabel{
 	classImage(classWin p)
 	{
 		parent = p;
-		
-		
 		BufferedImage img = null;
 		try {
-		    img = ImageIO.read(new File("E:\\xampp\\htdocs\\Hello.png"));
+		    img = ImageIO.read(new File("E:\\xampp\\htdocs\\screen.png"));
 		} catch (IOException e) {
 		    e.printStackTrace();
 		}
@@ -27,5 +25,6 @@ public class classImage extends JLabel{
 		ImageIcon ii=new ImageIcon(dimg);
 		this.setIcon(ii);
 		this.setBounds(0, 90, 480, 250);
+		
 	}
 }

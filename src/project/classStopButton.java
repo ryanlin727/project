@@ -15,5 +15,6 @@ public class classStopButton extends mainButton {
 	
 	public void doSomthing() {
 		//°±¤î¤W½Òª½¼½
+		parent.startButton.start=0;
 	}
 }
