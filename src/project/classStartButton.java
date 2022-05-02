@@ -2,7 +2,9 @@ package project;
 
 import java.awt.*;
 import java.awt.image.BufferedImage;
+import java.io.BufferedWriter;
 import java.io.File;
+import java.io.FileWriter;
 import java.io.IOException;
 
 import javax.imageio.ImageIO;
@@ -30,6 +32,17 @@ public class classStartButton extends mainButton {
 	 public void snapShot() {
 
 		 try {
+			 	File writename = new File("E:\\xampp\\htdocs\\img.txt");
+				try {
+					writename.createNewFile();// 建立新檔案
+					BufferedWriter out = new BufferedWriter(new FileWriter(writename));
+					out.write("0");
+					out.flush(); // 把快取區內容壓入檔案
+					out.close(); // 最後記得關閉檔案
+				} catch (IOException e) {
+					e.printStackTrace();
+				}
+			 
 		 //拷貝螢幕到一個BufferedImage物件screenshot
 		 BufferedImage screenshot = (new Robot()).createScreenCapture(new
 		 Rectangle(0, 0, (int) d.getWidth(), (int) d.getHeight()));
