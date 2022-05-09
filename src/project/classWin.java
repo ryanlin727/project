@@ -14,6 +14,9 @@ public class classWin extends win {
 	classStartButton startButton;
 	classStopButton stopButton;
 	classBackButton backButton;
+	classWhoButton whoButton;
+	classChatButton chatButton;
+	classChatWin chatWin;
 	classTimer timer;
 	
 	classWin(mainWin p)
@@ -31,6 +34,12 @@ public class classWin extends win {
 		jframe.add(startButton);
 		stopButton = new classStopButton(this);
 		jframe.add(stopButton);
+		whoButton = new classWhoButton(this);
+		jframe.add(whoButton);
+		
+		chatButton = new classChatButton(this);
+		jframe.add(chatButton);
+		chatWin = new classChatWin(this);
 		
 		backButton = new classBackButton(this);
 		jframe.add(backButton);

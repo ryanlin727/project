@@ -80,5 +80,6 @@ public class classTimer extends Timer {
 			}
 			
 		}
+		parent.jframe.repaint();
 	}
 }
