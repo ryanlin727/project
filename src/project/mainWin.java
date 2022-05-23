@@ -11,10 +11,6 @@ public class mainWin extends win{
 	announcementWin aWin;
 	classEnterButton ceb;
 	classWin cWin;
-	testEnterButton teb;
-	testWin tWin;
-	homeworkEnterButton heb;
-	homeworkWin hWin;
 	
 	titleLabel title;
 	
@@ -31,16 +27,10 @@ public class mainWin extends win{
 		jframe.add(aeb);
 		ceb = new classEnterButton(this);
 		jframe.add(ceb);
-		teb = new testEnterButton(this);
-		jframe.add(teb);
-		heb = new homeworkEnterButton(this);
-		jframe.add(heb);
 		
 		//建立其他視窗
 		aWin = new announcementWin(this);
 		cWin = new classWin(this);
-		tWin = new testWin(this);
-		hWin = new homeworkWin(this);
 	}
 	
 	
