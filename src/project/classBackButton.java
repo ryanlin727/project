@@ -1,5 +1,7 @@
 package project;
 
+import java.awt.Point;
+
 public class classBackButton extends mainButton {
 	classWin parent;
 	classBackButton(classWin p)
@@ -15,7 +17,12 @@ public class classBackButton extends mainButton {
 	
 	public void doSomthing() {
 		//設定可見性切換視窗
+		Point Loc = parent.jframe.getLocationOnScreen();
 		parent.jframe.setVisible(false);
 		parent.parent.jframe.setVisible(true);
+		//設定公告視窗位置
+		int x = Loc.x + 0;
+		int y = Loc.y + 0;
+		parent.parent.jframe.setLocation(x, y);
 	}
 }
